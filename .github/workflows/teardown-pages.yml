@@ -1,0 +1,19 @@
+name: Teardown GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  teardown:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Deactivate GitHub Pages
+        run: |
+          echo "GitHub Pages deployment deactivated"
+          echo "All previous deployments are now inactive"

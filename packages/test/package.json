@@ -12,6 +12,5 @@
     "@site/test-site": "workspace:*"
   },
   "devDependencies": {
-    "@testing-library/react": "^14.1.2"
   }
 }

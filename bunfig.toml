@@ -7,3 +7,4 @@ members = [
 ]
 [test]
 root = "./packages/test"
+preload = ["./packages/test/site/setupTests.ts", "./packages/test/site/bun-test.d.ts"]

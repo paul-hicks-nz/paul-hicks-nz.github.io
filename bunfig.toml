@@ -1,5 +1,9 @@
+[install]
+linker = "hoisted"
 [workspace]
 members = [
   "packages/site",
   "packages/test"
 ]
+[test]
+root = "./packages/test"

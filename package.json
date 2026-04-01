@@ -3,19 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "workspaces": ["packages/*"],
   "scripts": {
     "dev": "bun run --cwd packages/site dev",
     "build": "bun run --cwd packages/site build",
     "preview": "bun run --cwd packages/site preview",
-    "test": "bun run --cwd packages/test test",
-    "test:watch": "bun run --cwd packages/test test:watch",
-    "lint": "bun run --cwd packages/site lint",
-    "lint:fix": "bun run --cwd packages/site lint:fix"
+    "lint": "bun --elide-lines=0 run --filter='@site/*' lint",
+    "test": "bun --elide-lines=0 run --filter='@site/test-*' test"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3"
+    "eslint": "^10.1.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.58.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0"
   }
 }

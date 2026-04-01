@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react'
-import App from '@site/site/App'
+import * as test from 'bun:test';
+import { render, screen } from '@testing-library/react';
+import App from '@site/site/App';
 
 describe('App', () => {
   it('renders welcome message', () => {

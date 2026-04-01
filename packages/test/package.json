@@ -5,8 +5,8 @@
   "scripts": {
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "test": "bun --bun test --watchAll=false",
-    "test:watch": "bun --bun test --watchAll"
+    "test": "bun test --watchAll=false",
+    "test:watch": "bun test --watchAll"
   },
   "dependencies": {
     "@site/test-site": "workspace:*"

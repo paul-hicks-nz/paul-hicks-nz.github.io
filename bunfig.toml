@@ -1,0 +1,14 @@
+[install]
+linker = "hoisted"
+[workspace]
+members = [
+  "packages/site",
+  "packages/test"
+]
+[test]
+root = "./packages/test"
+preload = [
+  "./packages/test/site/happydom.ts",
+  "./packages/test/site/testing-library.ts",
+  "./packages/test/site/bun-test.d.ts"
+]

@@ -49,14 +49,15 @@ export function BasicInfo(): JSX.Element {
     const resume = useResume();
     return (
         <Card className='BasicInfo'>
-            <CardHeader title={resume.basics?.name ?? 'Basic Info'} />
+            <CardHeader title={resume.basics?.name ?? 'Basic Info'}>
+                <div>
+                    <a href={resume.basics?.url}>
+                        <img className='w-auto' src={resume.basics?.image} alt={resume.basics?.name ?? 'Profile image'} />
+                    </a>
+                </div>
+            </CardHeader>
             <CardContent>
                 <>
-                    <div>
-                        <a href={resume.basics?.url}>
-                            <img className='w-10 h-auto' src={resume.basics?.image} alt={resume.basics?.name ?? 'Profile image'} />
-                        </a>
-                    </div>
                     <div>{resume.basics?.label}</div>
                     <div>{resume.basics?.email}</div>
                     <div>{resume.basics?.phone}</div>
